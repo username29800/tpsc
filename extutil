@@ -1,0 +1,5 @@
+#!/bin/bash
+echo -e "$1" | grep -n . | grep ^$2: | cut -d: -f2- | tr \ , \\n | grep -n .
+echo -n "enter word num "
+read wd
+echo -e "$1" | grep -n . | grep ^$2: | cut -d: -f2- | tr \ , \\n | grep -n . | grep ^$wd: | cut -d: -f2-
