@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 fn=$1
 i=$(echo -e "$2")
 ap=$(echo -e "$fn" | cut -d"
