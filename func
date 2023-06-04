@@ -1,56 +1,56 @@
-cee () {
+function cee () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:" | cut -d: -f2-
 }
-ceel () {
+function ceel () {
     echo -e "$1" | grep -n "\$" | grep ^$2: | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$3-$4][$5-$6]:\|^$7[$8-$9]:" | cut -d: -f2-
 }
-ceen () {
+function ceen () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:"
 }
-cel () {
+function cel () {
     echo -e "$1" | grep -n "\$" | grep ^$2: | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
 }
-cem () {
+function cem () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
 }
-cemn () {
+function cemn () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:"
 }
-cxt () {
+function cxt () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n . | cut -d"
     " -f-$3 | cut -d"
     " -f$2- | cut -d: -f2- | tr -d \\n
 }
-charext () {
+function charext () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n . | cut -d"
     " -f-$3 | cut -d"
     " -f$2- | cut -d: -f2- | tr -d \\n
 }
-charnum() {
+function charnum() {
     echo -e "$1" | grep -n . | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n .
 }
-cxl () {
+function cxl () {
     echo -e "$1" | grep -n "\$" | grep ^"$2": | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | cut -d"
     " -f-$4 | cut -d"
     " -f$3- | cut -d: -f2- | tr -d \\n
 }
-ea () {
+function ea () {
     echo -e "$1"
 }
-lnext () {
+function lnext () {
     echo -e "$1" | grep -n . | cut -d"
     " -f-$3 | cut -d"
     " -f$2- | cut -d: -f2-
 }
-lng () {
+function lng () {
     echo -e "$1" | grep -n "\$" |  grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
 }
-lnge () {
+function lnge () {
     echo -e "$1" | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:" | cut -d: -f2-
 }
-lngel () {
+function lngel () {
     echo -e "$1" | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:"
 }
-lngl () {
+function lngl () {
     echo -e "$1" | grep -n "\$" |  grep "^$2[$3-$4]:\|^$5[$6-$7]:"
 }
