@@ -1,0 +1,56 @@
+cee () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:" | cut -d: -f2-
+}
+ceel () {
+    echo -e "$1" | grep -n "\$" | grep ^$2: | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$3-$4][$5-$6]:\|^$7[$8-$9]:" | cut -d: -f2-
+}
+ceen () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:"
+}
+cel () {
+    echo -e "$1" | grep -n "\$" | grep ^$2: | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
+}
+cem () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
+}
+cemn () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$2[$3-$4]:\|^$5[$6-$7]:"
+}
+cxt () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n . | cut -d"
+    " -f-$3 | cut -d"
+    " -f$2- | cut -d: -f2- | tr -d \\n
+}
+charext () {
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n . | cut -d"
+    " -f-$3 | cut -d"
+    " -f$2- | cut -d: -f2- | tr -d \\n
+}
+charnum() {
+    echo -e "$1" | grep -n . | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n .
+}
+cxl () {
+    echo -e "$1" | grep -n "\$" | grep ^"$2": | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | cut -d"
+    " -f-$4 | cut -d"
+    " -f$3- | cut -d: -f2- | tr -d \\n
+}
+ea () {
+    echo -e "$1"
+}
+lnext () {
+    echo -e "$1" | grep -n . | cut -d"
+    " -f-$3 | cut -d"
+    " -f$2- | cut -d: -f2-
+}
+lng () {
+    echo -e "$1" | grep -n "\$" |  grep "^$2[$3-$4]:\|^$5[$6-$7]:" | cut -d: -f2-
+}
+lnge () {
+    echo -e "$1" | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:" | cut -d: -f2-
+}
+lngel () {
+    echo -e "$1" | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:"
+}
+lngl () {
+    echo -e "$1" | grep -n "\$" |  grep "^$2[$3-$4]:\|^$5[$6-$7]:"
+}
