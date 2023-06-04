@@ -1,4 +1,4 @@
 #!/bin/sh
 echo -e "$1" | grep -n . | cut -d"
 " -f-$3 | cut -d"
-" -f$2- | cut -d: -f1-
+" -f$2- | cut -d: -f2-
