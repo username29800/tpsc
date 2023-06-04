@@ -1,2 +1,0 @@
-#!/bin/bash
-cat $1 | cat -n | grep "     "$2 | cut -d \  -f6- | cut -d"	" -f1- | tr \ , \\n | cat -n

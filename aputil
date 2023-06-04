@@ -1,6 +1,0 @@
-#!/bin/sh
-fn=$1
-i=$(echo -e "$2")
-ap=$(echo -e "$fn" | cut -d"
-" -f-$(echo -e "$fn" | wc -l))
-echo -e "$ap$i"
