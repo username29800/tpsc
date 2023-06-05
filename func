@@ -57,9 +57,11 @@ function lngl () {
 function clng () {
     charnum "$(lng "$1" "$2" "$3" "$4")"
 }
-function mvar () {
-    ea "$"$1""
-}
-function qvar () {
-    ea "\"$"$1"\""
+function lngx () {
+    echo -e "input should be an array\n"
+    la="$2"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | grep "^$i:"
+    done
 }
