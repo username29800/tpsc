@@ -22,6 +22,34 @@ function cxt () {
     " -f-$3 | cut -d"
     " -f$2- | cut -d: -f2- | tr -d \\n
 }
+function cef () {
+    la="$2"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$i:" | cut -d: -f2-
+    done
+}
+function cefn () {
+    la="$2"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$i:"
+    done
+}
+function cefl () {
+    la="$3"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | grep "^$2:" | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$i:" | cut -d: -f2-
+    done
+}
+function cefln () {
+    la="$3"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | grep "^$2:" | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^$i:"
+    done
+}
 function charext () {
     echo -e "$1" | grep -no . | cut -d: -f2- | grep -n . | cut -d"
     " -f-$3 | cut -d"
@@ -59,6 +87,13 @@ function clng () {
     charnum "$(lng "$1" "$2" "$3" "$4")"
 }
 function lngx () {
+    la="$2"
+    for i in ${la[@]}
+    do
+    echo -e "$1" | grep -n "\$" | grep "^$i:" | cut -d: -f2-
+    done
+}
+function lngxl () {
     la="$2"
     for i in ${la[@]}
     do
