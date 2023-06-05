@@ -59,7 +59,6 @@ function clng () {
     charnum "$(lng "$1" "$2" "$3" "$4")"
 }
 function lngx () {
-    echo -e "input should be an array\n"
     la="$2"
     for i in ${la[@]}
     do
