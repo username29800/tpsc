@@ -1,5 +1,5 @@
 function cee () {
-    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^$6[$7-$8]:" | cut -d: -f2-
+    echo -e "$1" | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$2-$3][$4-$5]:\|^[$6-$7][$8-$9]:" | cut -d: -f2-
 }
 function ceel () {
     echo -e "$1" | grep -n "\$" | grep ^$2: | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | grep "^[$3-$4][$5-$6]:\|^$7[$8-$9]:" | cut -d: -f2-
