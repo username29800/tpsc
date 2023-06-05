@@ -54,3 +54,6 @@ function lngel () {
 function lngl () {
     echo -e "$1" | grep -n "\$" |  grep "^$2[$3-$4]:\|^$5[$6-$7]:"
 }
+function clng () {
+    charnum "$(lng ""$1"" $2 $3 $4)"
+}
