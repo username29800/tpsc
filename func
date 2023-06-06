@@ -64,7 +64,7 @@ function cxl () {
     " -f$3- | cut -d: -f2- | tr -d \\n
 }
 function ea () {
-    echo -e "$@"
+    echo -e "$1"
 }
 function lnext () {
     echo -e "$1" | grep -n . | cut -d"
