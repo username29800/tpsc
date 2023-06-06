@@ -59,14 +59,21 @@ function charnum() {
     echo -e "$1" | grep -n . | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n .
 }
 function ccn () {
-    in="$@"
+    in="$1"
     for i in $(seq 0 ${#in})
     do
     echo -e "${in:$i}" | cut -c1
     done
 }
 function ccnn () {
-    ccn "$@" | grep -n "\$"
+    ccn "$1" | grep -n "\$"
+}
+function ccnl () {
+    in="$(echo -e "$1" | grep -n "\$" | grep "^$2:" | cut -d: -f2-)"
+    for i in $(seq 0 ${#in})
+    do
+    echo -e "${in:$i}" | cut -c1
+    done
 }
 function cxl () {
     echo -e "$1" | grep -n "\$" | grep ^"$2": | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | cut -d"
