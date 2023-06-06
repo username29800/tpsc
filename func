@@ -58,6 +58,16 @@ function charext () {
 function charnum() {
     echo -e "$1" | grep -n . | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n .
 }
+function ccn () {
+    in="$@"
+    for i in $(seq 0 ${#in})
+    do
+    echo -e "${in:$i}" | cut -c1
+    done
+}
+function ccnn () {
+    ccn "$@" | grep -n "\$"
+}
 function cxl () {
     echo -e "$1" | grep -n "\$" | grep ^"$2": | cut -d: -f2- | grep -no . | cut -d: -f2- | grep -n "\$" | cut -d"
     " -f-$4 | cut -d"
